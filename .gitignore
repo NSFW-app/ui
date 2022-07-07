@@ -10,12 +10,9 @@ schema.json
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
-
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -47,3 +44,6 @@ yarn-error.log*
 # Yalc
 .yalc
 yalc.lock
+
+# Rollup
+.rollup.cache

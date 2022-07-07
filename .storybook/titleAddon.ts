@@ -4,7 +4,7 @@ import { STORY_RENDERED, STORY_CHANGED } from '@storybook/core-events'
 addons.register('TitleAddon', (api) => {
   ;[STORY_RENDERED, STORY_CHANGED].forEach((evt) => {
     api.on(evt, () => {
-      document.title = `NSFW Design System`
+      document.title = `NSFW UI`
     })
   })
 })

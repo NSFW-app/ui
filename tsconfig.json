@@ -1,34 +1,41 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "target": "esnext",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
+    "target": "es6",
     "module": "esnext",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "strictPropertyInitialization": false,
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "paths": {
+      "core/*": ["core/*"],
+      "assets/*": ["assets/*"],
+      "hooks/*": ["hooks/*"],
+      "utils/*": ["utils/*"],
       "primitives/*": ["components/primitives/*"],
       "common/*": ["components/common/*"],
-      "shared/*": ["components/shared/*"],
-      "containers/*": ["components/containers/*"],
-      "static/*": ["public/static/*"],
+      "public/*": ["public/*"],
       // Storybook has defined global type definitions for Emotion's css prop which clashes with
       // Stitches' css prop (in dev). **This can be removed in Storybook 7 when it's released**.
-      // - https://github.com/storybookjs/storybook/pull/13300
+      // - https://githubsrc/core/types/types.d.tsokjs/storybook/pull/13300
       // - https://gist.github.com/sseagull/e2e7fe58f7f236897d342e776bb549a2
       "@emotion/core": ["./types.d.ts"]
-    }
+    },
+    "plugins": [
+      {
+        "transform": "@zerollup/ts-transform-paths",
+        "exclude": ["*"]
+      }
+    ],
+    "esModuleInterop": false,
+    "strict": true,
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "noImplicitAny": true,
+    // Declaration, sourceMap set via rollup build
+    "declaration": false,
+    "sourceMap": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["./src", "*.js", ".*.js"]
 }
