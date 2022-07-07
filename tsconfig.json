@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "strictPropertyInitialization": false,
+    "paths": {
+      "primitives/*": ["components/primitives/*"],
+      "common/*": ["components/common/*"],
+      "shared/*": ["components/shared/*"],
+      "containers/*": ["components/containers/*"],
+      "static/*": ["public/static/*"],
+      // Storybook has defined global type definitions for Emotion's css prop which clashes with
+      // Stitches' css prop (in dev). **This can be removed in Storybook 7 when it's released**.
+      // - https://github.com/storybookjs/storybook/pull/13300
+      // - https://gist.github.com/sseagull/e2e7fe58f7f236897d342e776bb549a2
+      "@emotion/core": ["./types.d.ts"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
