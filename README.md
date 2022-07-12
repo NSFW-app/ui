@@ -27,9 +27,9 @@ The core theming is namedspaced under "Stitches" as I think it's safe to assume 
 
 Sitches has a method called [globalCss](https://stitches.dev/docs/styling#global-styles) that is used for base styles, fonts, and browser/lib overrides.
 
-@nsfw/ui has some default global CSS that can be imported that uses global
+@nsfw/ui has some default global CSS that can be imported that is just `globalCss` internally.
 
-These can be injected into your app like below.
+These globals can be injected into your app like below.
 
 ```tsx
 import type { AppProps } from "next/app";
@@ -78,30 +78,37 @@ export const Home = () => (
 
 #### Linking to a local application
 
-You can use [yarn link](https://classic.yarnpkg.com/en/docs/cli/link/), but I recommend checking out [Yalc](https://github.com/whitecolor/yalc). [This article helped me understand using Yalc](https://medium.com/@mtfranchetto/the-solution-for-a-working-npm-yarn-link-ddcb4f3c785e).
+You can use [yarn link](https://classic.yarnpkg.com/en/docs/cli/link/), but I recommend checking out [Yalc](https://github.com/whitecolor/yalc). This [article](https://medium.com/@mtfranchetto/the-solution-for-a-working-npm-yarn-link-ddcb4f3c785e) helped me understand using Yalc.
 
-1. Build & publish the package locally
+##### Steps to link and refresh changes with Yalc
+
+1. Setup & publish the package to a _local_ registry
 
 ```bash
 cd nsfw/ui
+# Install deps
 yarn
-# Note, build can take up to 2min uncached to finished, with --watch, changes are faster.
-yarn build --watch
-# global install or npx yalc
-yalc publish
+# runs build with --watch
+yarn dev
+# Publish the package to a local registry with the help of Yalc
+npx yalc publish
 ```
 
 2. Add it to your application
 
 ```bash
 cd your-app
-yalc add @nsfw/ui
+npx yalc add @nsfw/ui
 # to remove:
-yalc remove @nsfw/ui
+npx yalc remove @nsfw/ui
 ```
 
-3. When you make changes simply run the command below to "push" changes to linked apps from @nsfw/ui
+3. Push package changes to linked apps
 
 ```bash
-yalc push
+cd nsfw/ui
+# Run this after any changes have been built to /dist
+npx yalc push
 ```
+
+> **NOTE**: NextJS caches node_modules in the `.next` directory. For NextJS projects, you'll need to `rm -r .next` and rerun the dev server.
