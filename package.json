@@ -2,7 +2,8 @@
   "name": "@nsfw/ui",
   "version": "0.0.0",
   "description": "NSFW Design System & UI Components library",
-  "module": "./dist/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
@@ -23,6 +24,7 @@
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
     "build": "yarn clean && yarn rollup -c",
+    "dev": "yarn build --watch",
     "clean": "shx rm -rf dist",
     "prepare": "husky install",
     "lint": "eslint --ext .js,.ts,.tsx ."
@@ -108,7 +110,6 @@
     "rollup": "^2.18.1",
     "rollup-plugin-peer-deps-external": "^2.2.2",
     "rollup-plugin-styles": "^4.0.0",
-    "rollup-plugin-typescript2": "^0.30.0",
     "rollup-plugin-url": "^3.0.1",
     "shx": "^0.3.4",
     "ttypescript": "^1.5.13",

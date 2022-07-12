@@ -32,10 +32,7 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "noImplicitAny": true,
-    // Declaration, sourceMap set via rollup build
-    "declaration": false,
-    "sourceMap": true
+    "noImplicitAny": true
   },
   "include": ["./src", "*.js", ".*.js"]
 }
