@@ -1,16 +1,11 @@
 import React from 'react'
-import { theme } from '../lib/theme'
-import { DarkModeProvider } from '../lib/theme/DarkModeContext'
-import { StoreProvider } from '../lib/store/StoreProvider'
-import { lightMode } from '../lib/theme/lightTheme'
-import { globalStyles } from '../lib/theme/global'
-import { Flex } from '../components/primitives/Flex'
-import { dummyPost } from '../components/shared/PostCard/PostCard.stories'
-import { mockProfile } from '../components/common/UserCard/UserCard.stories'
 
-import 'lib/theme/css/reset.css'
+import { Stitches, Flex } from '../src/index'
+import { DarkModeProvider } from '../src/core/providers/DarkModeContext'
 
-globalStyles()
+Stitches.globals.base()
+Stitches.globals.fonts()
+Stitches.globals.scrollbar()
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -43,25 +38,16 @@ export const decorators = [
   (story, props) => {
     const darkMode = props.globals.theme === 'dark' ? true : false
     return (
-      <StoreProvider
-        key='mst-store'
-        value={{
-          user: {
-            account: mockProfile,
-          },
-        }}
-      >
-        <DarkModeProvider value={darkMode}>
-          <Flex
-            full
-            column
-            className={darkMode ? '' : lightMode}
-            css={{ backgroundColor: theme.colors.gray100 }}
-          >
-            {story({ args: { darkMode, ...props.args } })}
-          </Flex>
-        </DarkModeProvider>
-      </StoreProvider>
+      <DarkModeProvider value={darkMode}>
+        <Flex
+          full
+          column
+          className={darkMode ? '' : Stitches.lightMode}
+          css={{ backgroundColor: Stitches.theme.colors.gray100 }}
+        >
+          {story({ args: { darkMode, ...props.args } })}
+        </Flex>
+      </DarkModeProvider>
     )
   },
 ]
