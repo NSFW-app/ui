@@ -1,5 +1,5 @@
 ---
-'@nsfw/ui': major
+'@nsfw-app/ui': major
 ---
 
 Package theming, components & utilities from the NSFW interface
@@ -8,3 +8,4 @@ Package theming, components & utilities from the NSFW interface
 - Setup commitlint
 - Setup prettierrc & .vscode
 - Build CJS & ESM with Rollup
+- Configure Github Registry for packaging

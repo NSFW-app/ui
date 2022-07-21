@@ -1,4 +1,4 @@
-# @nsfw/ui
+# @nsfw-app/ui
 
 - [Installation](#installation)
   - [Core Design System with StitchesJS](#core-design-system-with-stitchesjs)
@@ -15,7 +15,7 @@ Not published yet (see linking local in [Contributing](#contributing))
 
 ### Core Design System with StitchesJS
 
-@nsfw/ui currently uses [Stitches](https://stitches.dev/) as it's main styling & theming library.
+@nsfw-app/ui currently uses [Stitches](https://stitches.dev/) as it's main styling & theming library.
 
 The core Stitches API is exported onto a named module export `Stitches`, which is mainly the result of [`createStitches`](https://stitches.dev/docs/api#createstitches), but also other custom themes (lightTheme), global styles, and utils.
 
@@ -27,17 +27,17 @@ The core theming is namedspaced under "Stitches" as I think it's safe to assume 
 
 Sitches has a method called [globalCss](https://stitches.dev/docs/styling#global-styles) that is used for base styles, fonts, and browser/lib overrides.
 
-@nsfw/ui has some default global CSS that can be imported that is just `globalCss` internally.
+@nsfw-app/ui has some default global CSS that can be imported that is just `globalCss` internally.
 
 These globals can be injected into your app like below.
 
 ```tsx
 import type { AppProps } from "next/app";
-import { Stitches } from "@nsfw/ui";
+import { Stitches } from "@nsfw-app/ui";
 
 // App specific globals derived from internal Stitches theming
 const appGlobalCss = Stitches.createGlobalCss({
-  color: '$voilet100' // a Stitches "token" from @nsfw/ui core default theme.
+  color: '$voilet100' // a Stitches "token" from @nsfw-app/ui core default theme.
 })
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -55,7 +55,7 @@ export default MyApp;
 ### Importing your first component
 
 ```tsx
-import { Text, Heading, Flex } from '@nsfw/ui'
+import { Text, Heading, Flex } from '@nsfw-app/ui'
 
 export const Home = () => (
   <Flex column center>
@@ -69,7 +69,7 @@ export const Home = () => (
 
 ### Development
 
-@nsfw/ui uses [Storybook](https://storybook.js.org/docs/ember/get-started/introduction) as a UI development environment, which documents self-contained presentational components, and allows for controlled testing.
+@nsfw-app/ui uses [Storybook](https://storybook.js.org/docs/ember/get-started/introduction) as a UI development environment, which documents self-contained presentational components, and allows for controlled testing.
 
 #### Running Storybook locally
 
@@ -98,9 +98,9 @@ npx yalc publish
 
 ```bash
 cd your-app
-npx yalc add @nsfw/ui
+npx yalc add @nsfw-app/ui
 # to remove:
-npx yalc remove @nsfw/ui
+npx yalc remove @nsfw-app/ui
 ```
 
 3. Push package changes to linked apps
