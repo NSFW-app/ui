@@ -156,9 +156,14 @@ export const InputActionFieldContainer = styled(Flex, {
   ],
 })
 
-export const InputActionField: React.FC<ComponentProps<
-  typeof InputActionFieldContainer
->> = ({ css = {}, children, ...props }) => {
+export interface InputActionFieldProps
+  extends ComponentProps<typeof InputActionFieldContainer> {}
+
+export const InputActionField: React.FC<InputActionFieldProps> = ({
+  css = {},
+  children,
+  ...props
+}) => {
   return (
     <InputActionFieldContainer css={css} {...props}>
       {children}

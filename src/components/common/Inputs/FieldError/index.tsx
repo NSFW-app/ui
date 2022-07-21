@@ -3,7 +3,7 @@ import { Flex } from 'primitives/Flex'
 import { Text } from 'primitives/Text'
 import { theme } from 'core/stitches'
 
-interface FieldErrorProps extends ComponentProps<typeof Flex> {}
+export interface FieldErrorProps extends ComponentProps<typeof Flex> {}
 
 export const FieldError: React.FC<FieldErrorProps> = ({ children, css }) => (
   <>

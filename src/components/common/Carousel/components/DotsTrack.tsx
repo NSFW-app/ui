@@ -1,6 +1,6 @@
 import { theme } from 'core/stitches'
 import { Flex } from 'primitives/Flex'
-import { Dot } from 'common/Dot'
+import { Dot } from 'primitives/Dot'
 
 const DOT_WIDTH = 13
 const LIMIT = 11

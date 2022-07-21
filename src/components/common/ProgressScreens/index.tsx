@@ -3,7 +3,7 @@ import { ComponentProps } from '@stitches/react'
 import { Flex } from 'primitives/Flex'
 import { Box } from 'primitives/Box'
 import React, { Children, ReactElement, useEffect, useState } from 'react'
-import { Dot } from 'common/Dot'
+import { Dot } from 'primitives/Dot'
 import { useSpring } from '@react-spring/web'
 import { useDrag } from '@use-gesture/react'
 
