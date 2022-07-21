@@ -57,12 +57,10 @@ const config = [
       exports: 'named',
       sourcemap: true,
       entryFileNames: '[name].mjs',
-      // React v17 weirdness
-      // - https://github.com/facebook/react/issues/20235
+      // // React v17 weirdness
+      // // - https://github.com/facebook/react/issues/20235
       paths: {
-        'react/jsx-runtime': path.resolve(
-          './node_modules/react/jsx-runtime.js'
-        ),
+        'react/jsx-runtime': 'react/jsx-runtime.js',
       },
     },
     plugins: getPlugins('esm'),

@@ -91,7 +91,7 @@ yarn
 # runs build with --watch
 yarn dev
 # Publish the package to a local registry with the help of Yalc
-npx yalc publish
+npx yalc publish --no-scripts
 ```
 
 2. Add it to your application
