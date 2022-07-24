@@ -56,7 +56,6 @@ export const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
           css={{
             width: '100%',
             height: '40px',
-            backgroundColor: 'transparent',
             alignItems: 'center',
           }}
         >

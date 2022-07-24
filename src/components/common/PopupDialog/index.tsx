@@ -32,13 +32,11 @@ export const PopupDialog: React.FC<PopupDialogProps> = ({
       isOpen={isOpen}
       onBackgroundClick={onIgnore}
       css={{
-        backgroundColor: 'transparent',
         '@lg': {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundColor: 'transparent',
           height: '100%',
           width: '100%',
         },
@@ -46,7 +44,6 @@ export const PopupDialog: React.FC<PopupDialogProps> = ({
     >
       <PopupDialogModalContainer
         css={{
-          backgroundColor: 'transparent',
           position: 'absolute',
           width: '100%',
           bottom: '0',
@@ -69,7 +66,6 @@ export const PopupDialog: React.FC<PopupDialogProps> = ({
             height: '36px',
             width: '100%',
             cursor: 'pointer',
-            backgroundColor: 'transparent',
             '@lg': { display: 'none' },
           }}
           {...bind()}

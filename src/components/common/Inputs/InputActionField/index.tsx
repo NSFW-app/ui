@@ -17,7 +17,6 @@ export const InputActionFieldContainer = styled(Flex, {
   flexWrap: 'wrap',
   marginBottom: '20px',
   transition: 'margin 300ms ease',
-  backgroundColor: 'transparent',
   variants: {
     iconPosition: {
       right: {

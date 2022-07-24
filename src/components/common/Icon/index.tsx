@@ -20,7 +20,6 @@ const rotation = keyframes({
 })
 
 export const IconContainer = styled(Flex, {
-  backgroundColor: 'transparent !important',
   justifyContent: 'center',
   alignItems: 'center',
 })

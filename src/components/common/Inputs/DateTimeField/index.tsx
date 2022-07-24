@@ -57,7 +57,7 @@ export const DateTimeField: React.FC<DateTimeFieldProps> = ({
       control={control}
       name='dateTime'
       render={({ field: { onChange, value, ref } }) => (
-        <Flex transparent center full column css={css}>
+        <Flex center full column css={css}>
           <CalendarField
             name='dateInput'
             control={innerControl}

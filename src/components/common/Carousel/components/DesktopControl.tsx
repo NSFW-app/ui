@@ -13,7 +13,6 @@ export const DesktopControl = ({
 }) => (
   <Flex
     center
-    transparent
     css={{
       position: 'absolute',
       transition: 'opacity 125ms ease-in-out',

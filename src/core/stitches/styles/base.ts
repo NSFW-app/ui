@@ -18,6 +18,8 @@ export const base = () => {
       position: 'relative',
       margin: 0,
       backgroundColor: theme.colors.gray100,
+      color: theme.colors.gray900,
+      transition: 'background-color 200ms ease, color 200ms ease',
     },
   })
   return _base()

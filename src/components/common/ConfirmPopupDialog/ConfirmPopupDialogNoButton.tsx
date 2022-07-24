@@ -26,7 +26,7 @@ export const ConfirmPopupDialogNoButton: React.FC<ComponentProps<
       disabled={!!loading}
       {...props}
     >
-      <Box css={{ backgroundColor: 'transparent' }}>
+      <Box>
         {loading ? (
           <Spinner
             css={{ borderColor: theme.colors.red100, marginBottom: '5px' }}

@@ -1,5 +1,15 @@
 // Core
 export * as Stitches from './core/stitches'
+// Hooks
+export { useIsMobileSize } from './hooks/useIsMobileSize'
+export { useIsDesktopSize } from './hooks/useIsDesktopSize'
+export { useOnKeyDown } from './hooks/useOnKeyDown'
+export { useOutsideClick } from './hooks/useOutsideClick'
+export { useTimeDistance } from './hooks/useTimeDistance'
+export { useDisabledRightClick } from './hooks/useDisabledRightClick'
+export { useHasRunFirstRender } from './hooks/useHasRunFirstRender'
+export { useHorizontalDragToScroll } from './hooks/useHorizontalDragToScroll'
+export { useHasMounted } from './hooks/useHasMounted';
 // Components
 // -- Primitives
 export { Anchor } from './components/primitives/Anchor'
@@ -23,7 +33,7 @@ export { Section } from './components/primitives/Section'
 export { Span } from './components/primitives/Span'
 export { Svg } from './components/primitives/Svg'
 export { Switch } from './components/primitives/Switch'
-export { Table } from './components/primitives/Table'
+export * from './components/primitives/Table'
 export { TextArea } from './components/primitives/TextArea'
 export { Text } from './components/primitives/Text'
 export { Video } from './components/primitives/Video'

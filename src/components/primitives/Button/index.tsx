@@ -32,6 +32,8 @@ export const buttonCss: CSS = {
 
 export const primaryButtonVariantCss: CSS = {
   backgroundColor: theme.colors.voilet100,
+  // So the button is exact same height side-by-side with secondary variant
+  border: `1px solid ${theme.colors.voilet100}`,
   '&:disabled': {
     backgroundColor: theme.colors.voilet200,
     color: theme.colors.gray800,
