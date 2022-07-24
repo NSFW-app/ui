@@ -49,7 +49,6 @@ const ActionButton: React.FC<ActionButtonProps> = ({
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              backgroundColor: 'transparent',
             }}
           >
             {!btnProps.disabled && (

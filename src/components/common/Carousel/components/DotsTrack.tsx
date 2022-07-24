@@ -21,7 +21,6 @@ export const DotsTrack: React.FC<{ index: number; num: number }> = ({
 
   return (
     <Flex
-      transparent
       center
       css={{
         position: 'absolute',
@@ -38,7 +37,6 @@ export const DotsTrack: React.FC<{ index: number; num: number }> = ({
       }}
     >
       <Flex
-        transparent
         center
         className='track'
         css={{
