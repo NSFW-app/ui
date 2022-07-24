@@ -11,17 +11,14 @@ export const defaultTheme = createStitches({
       blue100: '#3BACEC',
       red100: '#E94B4B',
       gold100: '#FBC22F',
-      // Reverse naming to support dark/light theme mode color scale concept
-      // TODO: review this with @maine
-      //                  /| Figma value |
-      gray900: '#FFFFFF', // white
-      gray800: '#898EA2', // gray 400
-      gray700: '#5B5E6C', // gray 500
-      gray600: '#3D3F48', // gray 600
-      gray500: '#2C2E35', // gray 700
-      gray400: '#282A30', // gray 800
-      gray300: '#202126', // gray300
-      gray100: '#1B1C20', // gray 900
+      gray900: '#FFFFFF', // lightest
+      gray800: '#898EA2',
+      gray700: '#5B5E6C',
+      gray600: '#3D3F48',
+      gray500: '#2C2E35',
+      gray400: '#282A30',
+      gray300: '#202126',
+      gray100: '#1B1C20', // darkest
     },
     fonts: {
       primary: '"Inter", sans-serif',
@@ -50,12 +47,12 @@ export const defaultTheme = createStitches({
       blue: `linear-gradient(275deg, #7863FE 0%, #13C1EB 120%)`,
     },
     maxWidths: {
-      xsmall: 544,
-      small: 768,
-      medium: 1012,
-      large: 1280,
-      xlarge: 1440,
-      xxlarge: 1920,
+      xsmall: 320,
+      small: 480,
+      medium: 768,
+      large: 1024,
+      xlarge: 1200,
+      xxlarge: 1536,
     },
     container: {
       maxWidth: '1136px',
