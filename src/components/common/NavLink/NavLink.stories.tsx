@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { ComponentProps, useState } from 'react'
 import { Meta, Story } from '@storybook/react'
 import { styled } from 'core/stitches'
 import { StoryWrapper } from 'components/StoryWrapper'
@@ -9,10 +9,11 @@ const NavBar = styled(Nav, {
   backgroundColor: '$gray400',
 })
 
-interface TemplateProps {
+interface TemplateProps extends ComponentProps<typeof NavLink> {
   type?: 'vertical' | 'horizontal'
 }
-const Template: Story<TemplateProps> = ({ type }) => {
+
+const Template: Story<TemplateProps> = ({ type, withHighlight }) => {
   const [activeNav, setActiveNav] = useState<'fans' | 'creators' | 'faq'>(
     'fans'
   )
@@ -26,7 +27,8 @@ const Template: Story<TemplateProps> = ({ type }) => {
           highlightPosition={type}
           active={activeNav === 'fans'}
           onClick={() => setActiveNav('fans')}
-          href='#'
+          // href='#'
+          withHighlight={withHighlight}
         >
           Fans
         </NavLink>
@@ -34,7 +36,8 @@ const Template: Story<TemplateProps> = ({ type }) => {
           highlightPosition={type}
           active={activeNav === 'creators'}
           onClick={() => setActiveNav('creators')}
-          href='#'
+          // href='#'
+          withHighlight={withHighlight}
         >
           Creators
         </NavLink>
@@ -42,7 +45,8 @@ const Template: Story<TemplateProps> = ({ type }) => {
           highlightPosition={type}
           active={activeNav === 'faq'}
           onClick={() => setActiveNav('faq')}
-          href='#'
+          // href='#'
+          withHighlight={withHighlight}
         >
           FAQs
         </NavLink>
@@ -57,8 +61,13 @@ export default {
 } as Meta
 
 export const Horizontal = Template.bind({})
+Horizontal.args = {
+  type: 'horizontal',
+  withHighlight: false,
+}
 
 export const Vertical = Template.bind({})
 Vertical.args = {
   type: 'vertical',
+  withHighlight: false,
 }

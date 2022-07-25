@@ -22,7 +22,6 @@ const NavLinkContainer = styled(Flex, {
   height: '100%',
   justifyContent: 'center',
   margin: '2px',
-
   color: '$gray800',
   fontSize: '14px',
   '&:hover': {
@@ -41,19 +40,14 @@ const NavLinkContainer = styled(Flex, {
         },
       },
     },
+    withHighlight: { true: {} },
     highlightPosition: {
       horizontal: {
         borderBottom: '2px solid transparent',
-        '&:hover': {
-          borderBottom: '2px solid $voilet100',
-        },
       },
       vertical: {
         borderLeft: '2px solid transparent',
         paddingLeft: '24px',
-        '&:hover': {
-          borderLeft: '2px solid $voilet100',
-        },
         [`${NavLinkAnchor}`]: {
           justifyContent: 'start',
         },
@@ -64,15 +58,35 @@ const NavLinkContainer = styled(Flex, {
     {
       highlightPosition: 'horizontal',
       active: true,
+      withHighlight: true,
       css: {
         borderBottom: '2px solid $voilet100',
       },
     },
     {
+      highlightPosition: 'horizontal',
+      withHighlight: true,
+      css: {
+        '&:hover': {
+          borderBottom: '2px solid $voilet100',
+        },
+      },
+    },
+    {
       highlightPosition: 'vertical',
       active: true,
+      withHighlight: true,
       css: {
         borderLeft: '2px solid $voilet100',
+      },
+    },
+    {
+      highlightPosition: 'vertical',
+      withHighlight: true,
+      css: {
+        '&:hover': {
+          borderLeft: '2px solid $voilet100',
+        },
       },
     },
   ],
@@ -83,15 +97,27 @@ const NavLinkContainer = styled(Flex, {
 
 export interface NavLinkProps extends ComponentProps<typeof Anchor> {
   active?: VariantProps<typeof NavLinkContainer>['active']
+  withHighlight?: VariantProps<typeof NavLinkContainer>['withHighlight']
   highlightPosition?: VariantProps<typeof NavLinkContainer>['highlightPosition']
 }
 
 export const NavLink = forwardRef<HTMLAnchorElement, NavLinkProps>(
-  ({ children, active = false, highlightPosition, css, ...props }, ref) => {
+  (
+    {
+      children,
+      active = false,
+      withHighlight = false,
+      highlightPosition,
+      css,
+      ...props
+    },
+    ref
+  ) => {
     return (
       <NavLinkContainer
         active={active}
         highlightPosition={highlightPosition}
+        withHighlight={withHighlight}
         css={css}
       >
         <NavLinkAnchor nounderline ref={ref} {...props}>
