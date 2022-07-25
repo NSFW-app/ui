@@ -65,6 +65,7 @@ export { SnackBar, SnackBarProps } from './components/common/SnackBar'
 export { Spinner, SpinnerProps } from './components/common/Spinner'
 export { Tabs, TabsProps } from './components/common/Tabs'
 export { Toast, ToastProps } from './components/common/Toast'
+export { NavLink, NavLinkProps } from './components/common/NavLink'
 
 // ---- Inputs
 export { CommentField, CommentFieldProps } from './components/common/Inputs/CommentField'
