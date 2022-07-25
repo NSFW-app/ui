@@ -14,7 +14,7 @@ interface Templateprops extends HeadingProps, DarkModeProp {
 
 const HEADINGS: HeadingProps['as'][] = ['h1', 'h2', 'h3', 'h4', 'h5']
 
-const Template: Story<Templateprops> = ({ text, ...args }) => {
+const Template: Story<Templateprops> = ({ text, darkMode, ...args }) => {
   return (
     <StoryWrapper>
       {HEADINGS.map((as, i) => (

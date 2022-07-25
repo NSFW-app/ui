@@ -7,26 +7,50 @@ export const Heading = styled('h1', {
   variants: {
     as: {
       h1: {
-        fontSize: '38px',
+        fontSize: '32px',
         lineHeight: '48px',
         wordSpacing: 0,
+        '@md': {
+          fontSize: '36px',
+        },
+        '@lg': {
+          fontSize: '44px',
+        },
       },
       h2: {
-        fontSize: '28px',
+        fontSize: '26px',
         lineHeight: '36px',
         wordSpacing: 0,
+        '@md': {
+          fontSize: '28px',
+        },
+        '@lg': {
+          fontSize: '32px',
+        },
       },
       h3: {
         fontSize: '22px',
         fontWeight: 500,
         lineHeight: '24px',
         wordSpacing: 1.2,
+        '@md': {
+          fontSize: '24px',
+        },
+        '@lg': {
+          fontSize: '26px',
+        },
       },
       h4: {
         fontSize: '18px',
         fontWeight: 500,
         lineHeight: '24px',
         wordSpacing: 1.2,
+        '@md': {
+          fontSize: '20px',
+        },
+        '@lg': {
+          fontSize: '22px',
+        },
       },
       h5: {
         fontSize: '16px',
