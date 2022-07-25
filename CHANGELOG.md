@@ -1,5 +1,18 @@
 # @nsfw-app/ui
 
+## 1.1.0
+
+### Minor Changes
+
+- f7c1b76: Add NavLink component
+
+  Horizontal or vertical navigation links with highlighted border bottom/left on hover/active.
+
+- 57c7ec7: Fix typography (Heading/Text) responsivity
+
+  - Improve responsivity of typography across screen sizes, particularly, increase size of headings for large desktops
+  - Add subhead1 type variant to Text for larger paragraph tags, typically seen underneath h1's.
+
 ## 1.0.1
 
 ### Patch Changes
