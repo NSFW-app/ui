@@ -1,5 +1,17 @@
 import { styled, theme, CSS } from 'core/stitches'
 
+export const textSubhead1Css: CSS = {
+  fontSize: '16px',
+  wordSpacing: 1.5,
+  lineHeight: '33px',
+  '@md': {
+    fontSize: '18px',
+  },
+  '@lg': {
+    fontSize: '22px',
+  },
+}
+
 export const textBody1Css: CSS = {
   fontSize: '16px',
   wordSpacing: 1.3,
@@ -55,6 +67,7 @@ export const Text = styled('p', {
       caption1: textCaption1Css,
       caption2: textCaption2Css,
       caption3: textCaption3Css,
+      subhead1: textSubhead1Css,
     },
     font: {
       primary: {
