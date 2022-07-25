@@ -12,6 +12,7 @@ type TextProps = ComponentProps<typeof Text>
 interface TemplateProps extends DarkModeProp, TextProps {}
 
 const TYPES: TextProps['type'][] = [
+  'subhead1',
   'body1',
   'body2',
   'body3',
