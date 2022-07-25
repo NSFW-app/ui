@@ -25,7 +25,7 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build:storybook": "build-storybook",
+    "build:storybook": "build-storybook  -o .storybook/static",
     "build": "yarn clean && yarn rollup -c",
     "dev": "yarn build --watch",
     "clean": "shx rm -rf dist",
