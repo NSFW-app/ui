@@ -66,6 +66,7 @@ export { Spinner, SpinnerProps } from './components/common/Spinner'
 export { Tabs, TabsProps } from './components/common/Tabs'
 export { Toast, ToastProps } from './components/common/Toast'
 export { NavLink, NavLinkProps } from './components/common/NavLink'
+export * from './components/common/GroupedComparisonGrid'
 
 // ---- Inputs
 export { CommentField, CommentFieldProps } from './components/common/Inputs/CommentField'
