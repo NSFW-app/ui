@@ -11,8 +11,8 @@
       "assets/*": ["assets/*"],
       "hooks/*": ["hooks/*"],
       "utils/*": ["utils/*"],
-      "primitives/*": ["components/primitives/*"],
-      "common/*": ["components/common/*"],
+      "primitives/*": ["primitives/*"],
+      "components/*": ["components/*"],
       "public/*": ["public/*"],
       // Storybook has defined global type definitions for Emotion's css prop which clashes with
       // Stitches' css prop (in dev). **This can be removed in Storybook 7 when it's released**.
