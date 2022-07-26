@@ -1,5 +1,21 @@
 # @nsfw-app/ui
 
+## 1.2.0
+
+### Minor Changes
+
+- ea8b227: Add GroupedComparisonGrid component
+
+  Composable primitivies to form comparisons tables e.g pricing or fees section comparison tables
+
+### Patch Changes
+
+- 7d8f3b3: Remove common directory for top level components
+
+  - `/components/common` => `/components`
+  - `/components/primitives` => `/primitives`
+  - Moves some components in primitives to components (as they were not primitives)
+
 ## 1.1.0
 
 ### Minor Changes
