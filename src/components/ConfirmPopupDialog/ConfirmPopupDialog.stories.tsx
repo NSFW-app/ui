@@ -11,7 +11,7 @@ import { ConfirmPopupDialogNoButton } from './ConfirmPopupDialogNoButton'
 import { ConfirmPopupDialogProps } from './ConfirmPopupDialog'
 
 const Template: Story<ConfirmPopupDialogProps> = (props) => {
-  const [dialogIsOpen, setDialogIsOpen] = useState(true)
+  const [dialogIsOpen, setDialogIsOpen] = useState(false)
 
   // Modal is portalled to document body and shows scroll bar in Storybook, if we set overflow
   // hidden globally in css then it affects all stories, simpler to do this here.
@@ -35,7 +35,7 @@ const Template: Story<ConfirmPopupDialogProps> = (props) => {
         isOpen={dialogIsOpen}
       />
       <Button onClick={() => setDialogIsOpen(true)} theme='primary'>
-        Close create post
+        Open Popup Dialog
       </Button>
     </StoryWrapper>
   )
@@ -43,11 +43,11 @@ const Template: Story<ConfirmPopupDialogProps> = (props) => {
 
 export default {
   title: 'Components/ConfirmPopupDialog',
-  component: ConfirmPopupDialog,
+  component: Template,
 } as Meta
 
 // Building your own
-export const ComposedExample: Story<ConfirmPopupDialogProps> = () => {
+export const ComposedExample = () => {
   const [dialogIsOpen, setDialogIsOpen] = useState(true)
 
   // Modal is portalled to document body and shows scroll bar in Storybook, if we set overflow
@@ -82,7 +82,7 @@ export const ComposedExample: Story<ConfirmPopupDialogProps> = () => {
         </ConfirmPopupDialogActions>
       </ConfirmPopupDialog>
       <Button onClick={() => setDialogIsOpen(true)} theme='primary'>
-        Close create post
+        Open Popup Dialog
       </Button>
     </StoryWrapper>
   )
