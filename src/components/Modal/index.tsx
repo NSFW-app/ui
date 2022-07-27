@@ -49,7 +49,6 @@ export const Modal: React.FC<ModalProps> = ({
   style,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null)
-  console.log('foobar')
   const selectedAnimation = isTransitionProps(animation)
     ? animation
     : DEFAULT_MODAL_ANIMATIONS[animation]
