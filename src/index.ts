@@ -1,5 +1,8 @@
 // Core
 export * as Stitches from './core/stitches'
+// Utilities
+export * from 'utils'
+export * from 'utils/detectDevice'
 // Hooks
 export { useIsMobileSize } from './hooks/useIsMobileSize'
 export { useIsDesktopSize } from './hooks/useIsDesktopSize'
