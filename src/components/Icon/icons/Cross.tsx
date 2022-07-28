@@ -13,6 +13,7 @@ export const Cross: React.FC<SvgIconProps> = ({ css }) => (
   >
     <SvgPath
       d='M7.5 7.5L16.584 16.584'
+      className='primary stroke'
       css={{
         stroke: theme.colors.gray900,
       }}
@@ -21,6 +22,7 @@ export const Cross: React.FC<SvgIconProps> = ({ css }) => (
     />
     <SvgPath
       d='M16.5 7.5L7.5 16.5'
+      className='primary stroke'
       css={{
         stroke: theme.colors.gray900,
       }}
