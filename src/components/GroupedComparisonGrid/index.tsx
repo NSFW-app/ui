@@ -31,6 +31,7 @@ export const Cell = styled(Flex, {
 export const RowCell = styled(Cell, {
   height: '42px',
   borderBottom: `1px solid $gray600`,
+  minWidth: 'max-content',
   variants: {
     selected: {
       true: {
