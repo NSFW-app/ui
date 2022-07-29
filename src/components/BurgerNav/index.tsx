@@ -32,6 +32,8 @@ interface BurgerMenuProps {
   onOpen: () => void
   css?: CSS
   appContainerRef: React.MutableRefObject<HTMLElement | undefined>
+  gestureEdge?: number
+  navHeight?: number
 }
 
 export const BurgerMenu: React.FC<BurgerMenuProps> = ({
@@ -40,15 +42,12 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({
   onClose,
   onOpen,
   appContainerRef,
+  gestureEdge = MOBILE_NAV_GESTURE_EDGE,
+  navHeight = MOBILE_TOP_NAV_HEIGHT,
   css,
 }) => {
   useEffect(() => {
-    if (!appContainerRef.current) {
-      appContainerRef.current = window.document.querySelector('#__next') as
-        | HTMLElement
-        | undefined
-    }
-
+    const refContainer = appContainerRef
     const handleNativeGesture = (e: any) => {
       // is not near **right** edge of view, or the menu is opened, exit
       if (
@@ -64,20 +63,19 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({
 
     // Note, disabling the event via use-gesture onDrag or onDragStart does not seem to work..
     // defining native event to handle this.
-    appContainerRef.current?.addEventListener('touchstart', handleNativeGesture)
+    refContainer.current?.addEventListener('touchstart', handleNativeGesture)
     return () => {
-      appContainerRef.current?.removeEventListener(
+      refContainer.current?.removeEventListener(
         'touchstart',
         handleNativeGesture
       )
     }
   }, [appContainerRef, opened])
-
   useGesture(
     {
       onDrag: ({ initial, movement }) => {
         // is not near right edge of view, or the menu is open, exit
-        if (initial[0] >= window.innerWidth - MOBILE_NAV_GESTURE_EDGE) {
+        if (initial[0] >= window.innerWidth - gestureEdge) {
           if (movement[0] < -15) {
             onOpen()
           }
@@ -110,7 +108,7 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({
           display: 'flex',
           flexDirection: 'column',
           //Lower down the drawer so the Mobile Top Nav can be seen
-          top: `${MOBILE_TOP_NAV_HEIGHT}px`,
+          top: `${navHeight}px`,
         },
         '.mantine-Drawer-closeButton': {
           margin: '16px',
