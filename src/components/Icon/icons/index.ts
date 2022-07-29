@@ -49,6 +49,7 @@ export { Instagram } from './Instagram'
 export { Twitter } from './Twitter'
 export { Discord } from './Discord'
 export { Telegram } from './Telegram'
+export { Notion } from './Notion'
 
 export { Lock } from './Lock'
 export { Play } from './Play'
