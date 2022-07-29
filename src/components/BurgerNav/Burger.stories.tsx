@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { Story, Meta } from '@storybook/react'
 import { Box } from 'primitives/Box'
 import { BurgerMenu, BurgerRightMenuItems } from '.'
