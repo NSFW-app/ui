@@ -8,10 +8,8 @@ import {
   HoverCardArrow,
 } from './index'
 import { StoryWrapper } from 'components/StoryWrapper'
-import { Button } from 'primitives/Button'
-// TODO re-enable
-// import { Avatar } from 'components/Avatar'
-// import avatarSample from 'public/images/avatar_sample.png'
+import { Avatar } from 'components/Avatar'
+import avatarSample from 'public/images/avatar_sample.png'
 
 interface TemplateProps extends ComponentProps<typeof HoverCard> {
   showArrowTrigger: boolean
@@ -21,13 +19,12 @@ const Template: Story<TemplateProps> = ({ showArrowTrigger, ...args }) => (
   <StoryWrapper
     css={{
       display: 'flex',
-      justifyContent: 'center',
     }}
   >
     <HoverCard {...args}>
       <HoverCardTrigger>
-        <Button>Trigger</Button>
-        {/* <Avatar src={avatarSample} /> */}
+        Hover over avatar
+        <Avatar src={avatarSample} />
       </HoverCardTrigger>
       <HoverCardContent>
         {showArrowTrigger && <HoverCardArrow />}
