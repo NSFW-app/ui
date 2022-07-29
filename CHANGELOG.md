@@ -1,5 +1,26 @@
 # @nsfw-app/ui
 
+## 1.3.0
+
+### Minor Changes
+
+- 57863df: Add Mobile Hamburger menu drawer component [NSFW-1063](#6)
+- 4c117ad: Add Card component
+- 78a39ff: Add detectDevice util (react-device-detect)
+- 5fc6126: Refactor ConfirmPopupDialog to accept props to configure as well as children
+
+### Patch Changes
+
+- c74b218: Fix PopupDialog missing background-color for content container
+- 341c15e: Refactor Remove PopOver component
+- 4317e4b: Fix Button Uppercase as variant instead of default
+- 13ee4a8: Fix Container Move to primitive as styled Stitches component
+- c095fbc: Fix GroupedComparisonGrid Add RowCelll min-width
+- e627bc1: Fix icons/Cross Missing classes
+- d1609ee: Fix ConfirmPopupDialog Story controls showing props
+- 6c899b5: Fix SnackBar Exports to namespace the configs
+- 890c435: Fix BadgeBinance Apply themed svg path fill
+
 ## 1.2.0
 
 ### Minor Changes
