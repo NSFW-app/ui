@@ -1,9 +1,9 @@
 import { Icon } from 'components/Icon'
 import { ComponentProps, styled, theme } from 'core/stitches'
+import { SOCIAL_LINKS_PROPS } from 'core/types'
 import { Anchor } from 'primitives/Anchor'
 import { Box } from 'primitives/Box'
 import { Flex } from 'primitives/Flex'
-import { SOCIAL_LINKS } from 'utils/constants'
 
 export const BurgerLeftMenuItems = styled(Flex, {
   flexDirection: 'column',
@@ -11,11 +11,15 @@ export const BurgerLeftMenuItems = styled(Flex, {
   marginBottom: '8px',
 })
 
-interface BurgerLeftMenuProps extends ComponentProps<typeof Box> {}
-export const BurgerLeftMenu: React.FC<BurgerLeftMenuProps> = () => {
+interface BurgerLeftMenuProps extends ComponentProps<typeof Box> {
+  socialLinks: SOCIAL_LINKS_PROPS[]
+}
+export const BurgerLeftMenu: React.FC<BurgerLeftMenuProps> = ({
+  socialLinks,
+}) => {
   return (
     <BurgerLeftMenuItems>
-      {SOCIAL_LINKS.map(({ icon, href }) => (
+      {socialLinks.map(({ icon, href }) => (
         <Anchor
           css={{ border: 'none !important' }}
           key={href}

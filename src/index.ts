@@ -67,7 +67,8 @@ export { Tabs, TabsProps } from './components/Tabs'
 export { Toast, ToastProps } from './components/Toast'
 export { NavLink, NavLinkProps } from './components/NavLink'
 export * from './components/GroupedComparisonGrid'
-export { BurgerMenu } from './components/BurgerNav'
+export { BurgerMenu, BurgerRightMenuItems } from './components/BurgerNav'
+export {BurgerLeftMenu} from './components/BurgerNav/BurgerLeftMenu'
 
 // ---- Inputs
 export { CommentField, CommentFieldProps } from './components/Inputs/CommentField'

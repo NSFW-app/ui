@@ -3,7 +3,6 @@ import { Drawer } from '@mantine/core'
 import { CSS, styled, theme } from 'core/stitches'
 import { Flex } from 'primitives/Flex'
 import { useEffect, useRef } from 'react'
-import { BurgerLeftMenu } from './BurgerLeftMenu'
 
 // The xAxis "edge" that will disable the default touchstart event
 const MOBILE_NAV_GESTURE_EDGE = 25
@@ -20,7 +19,7 @@ const BurgerMainContainer = styled(Flex, {
   alignItems: 'flex-end',
 })
 
-const BurgerRightMenuItems = styled(Flex, {
+export const BurgerRightMenuItems = styled(Flex, {
   flexDirection: 'column',
   gap: '20px',
   p: { fontSize: '1.525em' },
@@ -32,6 +31,7 @@ interface BurgerMenuProps {
   onClose: () => void
   onOpen: () => void
   css?: CSS
+  appContainerRef: React.MutableRefObject<HTMLElement | undefined>
 }
 
 export const BurgerMenu: React.FC<BurgerMenuProps> = ({
@@ -39,10 +39,9 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({
   children,
   onClose,
   onOpen,
+  appContainerRef,
   css,
 }) => {
-  const appContainerRef = useRef<HTMLElement | undefined>()
-
   useEffect(() => {
     if (!appContainerRef.current) {
       appContainerRef.current = window.document.querySelector('#__next') as
@@ -127,10 +126,7 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({
         },
       })}
     >
-      <BurgerMainContainer css={css}>
-        <BurgerLeftMenu />
-        <BurgerRightMenuItems>{children}</BurgerRightMenuItems>
-      </BurgerMainContainer>
+      <BurgerMainContainer css={css}>{children}</BurgerMainContainer>
     </Drawer>
   )
 }
