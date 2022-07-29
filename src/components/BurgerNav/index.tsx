@@ -31,7 +31,7 @@ interface BurgerMenuProps {
   onClose: () => void
   onOpen: () => void
   css?: CSS
-  appContainerRef: React.MutableRefObject<HTMLElement | undefined>
+  appContainerRef?: React.MutableRefObject<HTMLElement | undefined>
   gestureEdge?: number
   navHeight?: number
 }
@@ -63,9 +63,9 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({
 
     // Note, disabling the event via use-gesture onDrag or onDragStart does not seem to work..
     // defining native event to handle this.
-    refContainer.current?.addEventListener('touchstart', handleNativeGesture)
+    refContainer?.current?.addEventListener('touchstart', handleNativeGesture)
     return () => {
-      refContainer.current?.removeEventListener(
+      refContainer?.current?.removeEventListener(
         'touchstart',
         handleNativeGesture
       )

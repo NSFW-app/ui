@@ -26,15 +26,8 @@ const SOCIAL_LINKS: SocialLinkProps[] = [
 ]
 
 const Template: Story<TemplateProps> = ({ ...args }) => {
-  const appContainerRef = useRef<HTMLElement | undefined>()
   const [isOpen, setIsOpen] = useState(false)
-  useEffect(() => {
-    if (!appContainerRef.current) {
-      appContainerRef.current = window.document.querySelector('#__next') as
-        | HTMLElement
-        | undefined
-    }
-  })
+
   return (
     <Box>
       <Hamburger
@@ -50,7 +43,6 @@ const Template: Story<TemplateProps> = ({ ...args }) => {
         opened={isOpen}
         onClose={() => console.log('close')}
         onOpen={() => console.log('close')}
-        appContainerRef={appContainerRef}
         {...args}
       >
         <BurgerLeftMenu socialLinks={SOCIAL_LINKS} />
