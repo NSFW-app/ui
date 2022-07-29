@@ -71,7 +71,7 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({
         handleNativeGesture
       )
     }
-  }, [opened])
+  }, [appContainerRef, opened])
 
   useGesture(
     {
