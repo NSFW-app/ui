@@ -16,7 +16,6 @@ export const buttonCss: CSS = {
   fontSize: '14px',
   lineHeight: '16px',
   fontWeight: 600,
-  textTransform: 'uppercase',
   textDecoration: 'none',
   cursor: 'pointer',
   '&:focus': {
@@ -258,6 +257,11 @@ export const Button = styled('button', {
     },
     round: {
       true: roundButtonCss,
+    },
+    uppercase: {
+      true: {
+        textTransform: 'uppercase',
+      },
     },
     pill: {
       true: pillButtonCss,
