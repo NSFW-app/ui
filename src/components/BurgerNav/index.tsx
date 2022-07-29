@@ -2,7 +2,7 @@ import { Target, useDrag, useGesture } from '@use-gesture/react'
 import { Drawer } from '@mantine/core'
 import { CSS, styled, theme } from 'core/stitches'
 import { Flex } from 'primitives/Flex'
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 
 // The xAxis "edge" that will disable the default touchstart event
 const MOBILE_NAV_GESTURE_EDGE = 25
