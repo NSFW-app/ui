@@ -8,6 +8,7 @@ export const PopupDialogContent = ({
 }: ComponentProps<typeof Flex>) => (
   <Flex
     css={{
+      backgroundColor: theme.colors.gray100,
       flexDirection: 'column',
       padding: '32px 16px',
       textAlign: 'center',

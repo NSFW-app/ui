@@ -5,7 +5,7 @@ import { Modal, ModalProps } from 'components/Modal'
 import { Box } from 'primitives/Box'
 import { Flex } from 'primitives/Flex'
 
-const PopupDialogModalContainer = styled(Box)
+const PopupDialogModalContainer = styled(Box, {})
 
 export interface PopupDialogProps extends Omit<ModalProps, 'onClose'> {
   onIgnore: () => void
