@@ -24,6 +24,14 @@ export const defaultTheme = createStitches({
       primary: '"Inter", sans-serif',
       secondary: '"Roboto", Arial, Helvetica, sans-serif;',
     },
+    space: {
+      1: '4px',
+      2: '8px',
+      3: '16px',
+      4: '24px',
+      5: '36px',
+      6: '48px',
+    },
     radii: {},
     shadows: {
       lg: '6px 3px 16px #121217',
@@ -56,6 +64,7 @@ export const defaultTheme = createStitches({
     },
     container: {
       maxWidth: '1136px',
+      padding: '16px',
     },
   },
   media: {
