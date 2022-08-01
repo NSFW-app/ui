@@ -3,7 +3,11 @@ import { useViewportSize } from '@mantine/hooks'
 
 const { theme } = defaultTheme
 
-export const useIsMobileSize = () => {
+// Use the initial value with SSR to set what you want the server to render. Then when window is available,
+// this hook will update. Doing this prevent SSR diff errors.
+export const useIsMobileSize = (initial = false) => {
   const { width } = useViewportSize()
-  return !!(width && width < Number(theme.maxWidths.large.value))
+  return typeof window !== 'undefined'
+    ? !!(width && width < Number(theme.maxWidths.large.value))
+    : initial
 }
