@@ -1,5 +1,13 @@
 # @nsfw-app/ui
 
+## 1.4.0
+
+### Minor Changes
+
+- 8ef2d7e: Add CurrencySelectOption button with grouped Story
+- a711c81: Add uppercase variant to Anchor (alike Button)
+- d19bc80: Add ButtonGroup primitive
+
 ## 1.3.0
 
 ### Minor Changes
