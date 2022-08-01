@@ -23,7 +23,10 @@ interface TemplateProps {}
 
 const Template: Story<TemplateProps> = () => {
   return (
-    <StoryWrapper className='wrapper'>
+    <StoryWrapper
+      className='wrapper'
+      css={{ background: '$gray500', height: '100vh', padding: 36 }}
+    >
       <Box
         css={{
           padding: '24px',
@@ -51,6 +54,7 @@ const Template: Story<TemplateProps> = () => {
             </Flex>
             <Anchor
               button
+              uppercase
               theme='primary'
               css={{ maxHeight: '36px', marginBottom: '16px' }}
             >

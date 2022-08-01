@@ -30,7 +30,7 @@ export const Cell = styled(Flex, {
 
 export const RowCell = styled(Cell, {
   height: '42px',
-  borderBottom: `1px solid $gray600`,
+  borderBottom: `1px solid #3a3b40`,
   minWidth: 'max-content',
   variants: {
     selected: {
@@ -39,7 +39,7 @@ export const RowCell = styled(Cell, {
           content: '',
           position: 'absolute',
           inset: '0px 30px',
-          borderBottom: `1px solid $gray600`,
+          borderBottom: `1px solid #3a3b40`,
         },
       },
     },
