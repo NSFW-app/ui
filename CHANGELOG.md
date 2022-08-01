@@ -1,5 +1,12 @@
 # @nsfw-app/ui
 
+## 1.4.1
+
+### Patch Changes
+
+- 4513108: Fix GroupedComparisonGrid row border bottom default color
+- d33afad: Fix Desktop/mobile viewport size hooks for SSR
+
 ## 1.4.0
 
 ### Minor Changes
