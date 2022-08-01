@@ -22,6 +22,11 @@ export const Anchor = styled('a', {
       true: buttonCss,
       tab: { ...buttonCss, ...tabButtonCss, textDecoration: 'none' },
     },
+    uppercase: {
+      true: {
+        textTransform: 'uppercase',
+      },
+    },
     icon: {
       true: iconButtonCss,
     },
