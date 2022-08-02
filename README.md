@@ -11,7 +11,9 @@
 
 ## Installation
 
-Not published yet (see linking local in [Contributing](#contributing))
+```
+yarn add @nsfw-app/ui
+```
 
 ### Core Design System with StitchesJS
 
