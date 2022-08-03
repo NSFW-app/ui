@@ -29,13 +29,14 @@ export const ModalContentDialog = ({
         minHeight: '100%',
         width: '100%',
         padding: '16px',
-        boxShadow: theme.shadows.sm,
+        backgroundColor: '$gray100',
+        boxShadow: '$sm',
         ...css,
         '@lg': {
           height: 'auto',
           maxHeight: '100%',
           borderRadius: '8px',
-          boxShadow: theme.shadows.lg,
+          boxShadow: '$lg',
           // Override these as need be
           minHeight: 'auto',
           width: '420px',

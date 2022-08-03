@@ -9,6 +9,7 @@ export const ModalContent = ({
 }: ComponentProps<typeof Flex>) => (
   <Flex
     css={{
+      backgroundColor: '$gray100',
       position: 'fixed',
       flexDirection: 'column',
       padding: '16px',
