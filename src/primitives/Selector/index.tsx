@@ -1,7 +1,6 @@
 import { styled, keyframes } from '@stitches/react'
 import * as SelectPrimitive from '@radix-ui/react-select'
 import { theme } from 'core/stitches'
-import { Text } from 'primitives/Text'
 
 const appear = keyframes({
   '0%': {
