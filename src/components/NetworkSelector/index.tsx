@@ -1,0 +1,70 @@
+import { useState } from 'react'
+import { ChevronUpIcon } from '@radix-ui/react-icons'
+
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectIcon,
+  SelectItem,
+  SelectItemText,
+  SelectTrigger,
+  SelectValue,
+  SelectViewport,
+} from 'primitives/Selector'
+import { Icon } from 'components/Icon'
+import { Flex } from 'primitives/Flex'
+
+export const NetworkSelector = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [selectedValue, setSelectedValue] = useState('ETH')
+  return (
+    <Flex css={{ alignItems: 'center' }}>
+      <Select
+        onOpenChange={(open) => setIsOpen(open)}
+        defaultValue='ETH'
+        onValueChange={(value) => setSelectedValue(value)}
+      >
+        <SelectTrigger aria-label='Networks'>
+          <Icon
+            icon={
+              selectedValue === 'ETH'
+                ? 'BadgeEthereum'
+                : selectedValue === 'BNB'
+                ? 'BadgeBinance'
+                : 'BadgePolygon'
+            }
+            css={{ height: 20, marginRight: '10px' }}
+          />
+          <SelectValue placeholder='ETH' />
+          <SelectIcon>
+            <ChevronUpIcon
+              style={{
+                transform: !isOpen ? 'rotate(180deg)' : 'none',
+                transition: 'transform 0.5s ease',
+              }}
+            />
+          </SelectIcon>
+        </SelectTrigger>
+        <SelectContent>
+          <SelectViewport>
+            <SelectGroup>
+              <SelectItem value='ETH'>
+                <Icon icon='BadgeEthereum' css={{ height: 20 }} />
+                <SelectItemText>Ethereum</SelectItemText>
+              </SelectItem>
+              <SelectItem value='BNB'>
+                <Icon icon='BadgeBinance' css={{ height: 20 }} />
+                <SelectItemText>Binance</SelectItemText>
+              </SelectItem>
+              <SelectItem value='MATIC'>
+                <Icon icon='BadgePolygon' css={{ height: 20 }} />
+                <SelectItemText>Polygon</SelectItemText>
+              </SelectItem>
+            </SelectGroup>
+          </SelectViewport>
+        </SelectContent>
+      </Select>
+    </Flex>
+  )
+}
