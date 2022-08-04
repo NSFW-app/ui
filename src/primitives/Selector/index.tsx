@@ -20,23 +20,23 @@ const StyledTrigger = styled(SelectPrimitive.SelectTrigger, {
   fontSize: 15,
   height: 50,
   width: 165,
-  backgroundColor: theme.colors.gray400,
-  color: theme.colors.gray900,
-  boxShadow: `0 2px 10px ${theme.colors.gray100}`,
+  backgroundColor: '$gray400',
+  color: '$gray900',
+  boxShadow: '0 2px 10px $gray100',
   border: '1px solid transparent',
   whiteSpace: 'nowrap',
   overflow: 'hidden',
-  '&:hover': { border: `1px solid ${theme.colors.voilet100}` },
-  '&[data-placeholder]': { color: theme.colors.gray900 },
+  '&:hover': { border: '1px solid $voilet100' },
+  '&[data-placeholder]': { color: '$gray900' },
 })
 
 const StyledIcon = styled(SelectPrimitive.SelectIcon, {
-  color: theme.colors.gray900,
+  color: '$gray900',
   margin: '3px 0 0 12px',
 })
 
 const StyledContent = styled(SelectPrimitive.Content, {
-  backgroundColor: theme.colors.gray400,
+  backgroundColor: '$gray400',
   borderRadius: 10,
   zIndex: theme.zIndices.layerOne,
   position: 'fixed',
@@ -67,19 +67,19 @@ const StyledItem = styled(SelectPrimitive.Item, {
   alignItems: 'center',
   fontSize: 15,
   lineHeight: 1,
-  color: theme.colors.gray800,
+  color: '$gray800',
   padding: '0 15px 0 15px',
   cursor: 'pointer',
   overflow: 'hidden',
 
   '&[data-disabled]': {
-    color: theme.colors.voilet100,
+    color: '$voilet100',
     pointerEvents: 'none',
   },
 
   '&[data-state=checked]': {
     transition: theme.transitions.easeOutExpo,
-    color: theme.colors.gray900,
+    color: '$gray900',
   },
 })
 
@@ -87,12 +87,12 @@ const StyledLabel = styled(SelectPrimitive.Label, {
   padding: '0 25px',
   fontSize: 15,
   lineHeight: '25px',
-  color: theme.colors.voilet100,
+  color: '$voilet100',
 })
 
 const StyledSeparator = styled(SelectPrimitive.Separator, {
   height: 1,
-  backgroundColor: theme.colors.voilet100,
+  backgroundColor: '$voilet100',
   margin: 5,
 })
 
