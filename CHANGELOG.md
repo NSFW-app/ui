@@ -1,5 +1,11 @@
 # @nsfw-app/ui
 
+## 1.6.0
+
+### Minor Changes
+
+- 27518fc: Add \$NSFW badge icon
+
 ## 1.5.0
 
 ### Minor Changes
