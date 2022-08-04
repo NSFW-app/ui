@@ -3,7 +3,7 @@ export * as Stitches from './core/stitches'
 // Utilities
 export * from 'utils'
 export * from 'utils/detectDevice'
-export { isError } from 'utils/typeGuards'
+export * from 'utils/typeGuards'
 export type { RecursivePartial } from 'utils/typeHelpers'
 // Hooks
 export { useIsMobileSize } from './hooks/useIsMobileSize'
