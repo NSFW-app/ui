@@ -1,4 +1,4 @@
-import { styled, theme, ComponentProps } from 'core/stitches'
+import { styled, ComponentProps } from 'core/stitches'
 import { Box } from 'primitives/Box'
 
 // The desktop display of the ModalContentDialog needs a wrapper flex to center it.
