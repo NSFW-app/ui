@@ -68,6 +68,7 @@ export { ExternalLink } from './ExternalLink'
 export { Camera } from './Camera'
 export { Unlock } from './Unlock'
 export { BadgeBinance } from './BadgeBinance'
+export { BadgeNsfw } from './BadgeNsfw'
 
 export { Sales } from './Sales'
 export { Purchases } from './Purchases'
