@@ -67,7 +67,7 @@ export { NoAssetFallback, NoAssetFallbackProps } from './components/NoAssetFallb
 export { OptionsList, OptionsListProps } from './components/OptionList'
 export { PopupDialog, PopupDialogProps, PopupDialogContent } from './components/PopupDialog'
 export { PricePill, PricePillProps } from './components/PricePill'
-export { ProgressScreens, ProgressScreensProps } from './components/ProgressScreens'
+export { ProgressScreens, ProgressScreensProps, ProgressScreenProps } from './components/ProgressScreens'
 export { SearchBarDropdown, SearchBarDropdownProps } from './components/SearchBarDropdown'
 export { SnackBar, SnackBarProps, SnackBarConfig } from './components/SnackBar'
 export { Spinner, SpinnerProps } from './components/Spinner'

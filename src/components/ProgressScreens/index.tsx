@@ -23,7 +23,8 @@ export interface ProgressScreensProps extends ComponentProps<typeof Flex> {
   onSwipeRight?: () => void
 }
 
-export interface ProgressScreen {
+// Applied via React clone element
+export interface ProgressScreenProps {
   isActive?: boolean
   isAnimating?: boolean
 }
