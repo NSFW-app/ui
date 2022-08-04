@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Meta, Story } from '@storybook/react'
 import { StoryWrapper } from 'components/StoryWrapper'
-import { ChevronUpIcon } from '@radix-ui/react-icons'
 import {
   Select,
   SelectContent,
@@ -43,12 +42,15 @@ const Template: Story<TemplateProps> = () => {
             />
             <SelectValue placeholder='ETH' />
             <SelectIcon>
-              <ChevronUpIcon
-                style={{
-                  height: 20,
-                  width: 20,
-                  transform: !isOpen ? 'rotate(180deg)' : 'none',
+              <Icon
+                icon='Chevron'
+                css={{
+                  transform: !isOpen ? 'rotate(90deg)' : 'rotate(270deg)',
                   transition: 'transform 0.5s ease',
+                  '& .primary.stroke': {
+                    stroke: '$gray900',
+                    strokeWidth: '2px',
+                  },
                 }}
               />
             </SelectIcon>

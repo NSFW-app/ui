@@ -31,8 +31,7 @@ const StyledTrigger = styled(SelectPrimitive.SelectTrigger, {
 })
 
 const StyledIcon = styled(SelectPrimitive.SelectIcon, {
-  color: '$gray900',
-  margin: '3px 0 0 12px',
+  margin: '2px 0 0 15px',
 })
 
 const StyledContent = styled(SelectPrimitive.Content, {
@@ -44,11 +43,11 @@ const StyledContent = styled(SelectPrimitive.Content, {
   width: 165,
 
   '&[data-state=open]': {
-    animation: `${appear} 200ms ease-in`,
+    animation: `${appear} 400ms ease-in`,
   },
 })
 
-const StyledViewport = styled(SelectPrimitive.Viewport, {})
+const StyledViewport = styled(SelectPrimitive.Viewport, { padding: '10px 0' })
 
 // @ts-ignore
 function Content({ children, ...props }) {
@@ -71,6 +70,10 @@ const StyledItem = styled(SelectPrimitive.Item, {
   padding: '0 15px 0 15px',
   cursor: 'pointer',
   overflow: 'hidden',
+
+  '&[data-highlighted]': {
+    color: '$gray900',
+  },
 
   '&[data-disabled]': {
     color: '$voilet100',
