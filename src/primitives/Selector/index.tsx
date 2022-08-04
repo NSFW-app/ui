@@ -48,7 +48,7 @@ const StyledContent = styled(SelectPrimitive.Content, {
   },
 })
 
-const StyledViewport = styled(SelectPrimitive.Viewport, { padding: '10px 0' })
+const StyledViewport = styled(SelectPrimitive.Viewport, {})
 
 // @ts-ignore
 function Content({ children, ...props }) {
@@ -77,10 +77,6 @@ const StyledItem = styled(SelectPrimitive.Item, {
     pointerEvents: 'none',
   },
 
-  '&[data-highlighted]': {
-    color: theme.colors.gray900,
-    backgroundColor: theme.colors.gray300,
-  },
   '&[data-state=checked]': {
     transition: theme.transitions.easeOutExpo,
     color: theme.colors.gray900,
