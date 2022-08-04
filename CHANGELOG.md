@@ -1,5 +1,17 @@
 # @nsfw-app/ui
 
+## 1.5.0
+
+### Minor Changes
+
+- fbb0116: Add isPromise typegaurd
+
+### Patch Changes
+
+- 2702262: Export ProgressScreenProps interface
+- 9eae3b3: Fix modal wrappers missing background-color
+- 1168fa2: Fix react-hook-form missing peerDependency
+
 ## 1.4.1
 
 ### Patch Changes
