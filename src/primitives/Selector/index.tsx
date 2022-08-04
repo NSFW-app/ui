@@ -1,4 +1,4 @@
-import { styled, keyframes } from '@stitches/react'
+import { styled, keyframes } from 'core/stitches'
 import * as SelectPrimitive from '@radix-ui/react-select'
 import { theme } from 'core/stitches'
 
@@ -32,7 +32,7 @@ const StyledTrigger = styled(SelectPrimitive.SelectTrigger, {
 
 const StyledIcon = styled(SelectPrimitive.SelectIcon, {
   color: theme.colors.gray900,
-  margin: '2px 0 0 12px',
+  margin: '3px 0 0 12px',
 })
 
 const StyledContent = styled(SelectPrimitive.Content, {
@@ -44,7 +44,7 @@ const StyledContent = styled(SelectPrimitive.Content, {
   width: 165,
 
   '&[data-state=open]': {
-    animation: `${appear} 400ms ease-in`,
+    animation: `${appear} 200ms ease-in`,
   },
 })
 
