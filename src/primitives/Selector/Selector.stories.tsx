@@ -46,7 +46,7 @@ const Template: Story<TemplateProps> = () => {
                 icon='Chevron'
                 css={{
                   transform: !isOpen ? 'rotate(90deg)' : 'rotate(270deg)',
-                  transition: 'transform 0.5s ease',
+                  transition: 'transform 150ms ease',
                   '& .primary.stroke': {
                     stroke: '$gray900',
                     strokeWidth: '2px',
