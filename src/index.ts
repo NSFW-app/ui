@@ -87,6 +87,7 @@ export { NavLink, NavLinkProps } from './components/NavLink'
 export * from './components/GroupedComparisonGrid'
 export { BurgerMenu, BurgerRightMenuItems } from './components/BurgerNav'
 export {BurgerLeftMenu} from './components/BurgerNav/BurgerLeftMenu'
+export {ExternalLink} from './components/ExternalLink'
 
 // ---- Inputs
 export { CommentField, CommentFieldProps } from './components/Inputs/CommentField'
