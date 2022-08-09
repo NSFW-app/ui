@@ -19,14 +19,14 @@ const StyledTrigger = styled(SelectPrimitive.SelectTrigger, {
   padding: '0 15px',
   fontSize: 15,
   height: 50,
-  backgroundColor: '$gray400',
+  background: theme.gradients.blue2,
   color: '$gray900',
   boxShadow: '0 2px 10px $gray100',
-  border: '1px solid transparent',
+  border: '1px solid $gray300',
   whiteSpace: 'nowrap',
   overflow: 'hidden',
 
-  '&:hover': { border: '1px solid $voilet100' },
+  '&:hover': { border: '1px solid $gray600' },
   '&[data-placeholder]': { color: '$gray900' },
 })
 

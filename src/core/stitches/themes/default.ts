@@ -52,7 +52,10 @@ export const defaultTheme = createStitches({
       iconColor: `fill 200ms ease, stroke 200ms ease`,
     },
     gradients: {
-      blue: `linear-gradient(275deg, #7863FE 0%, #13C1EB 120%)`,
+      blue: `linear-gradient(275deg, #7863FE 0%, #13C1EB 100%)`,
+      blue2: `linear-gradient(150deg, rgba(2,0,36,0.1) 00%, rgba(9,9,121,0.1) 35%, rgba(0,212,255,0.1) 100%)`,
+      yellow: `linear-gradient(73.28deg, #403C3C 6.51%, #403721 88.45%)`,
+      violet: `linear-gradient(73.28deg, #8247E5 6.51%, #6027C0 88.45%)`,
     },
     maxWidths: {
       xsmall: 320,
