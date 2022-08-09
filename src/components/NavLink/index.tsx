@@ -29,6 +29,10 @@ const NavLinkContainer = styled(Flex, {
     [`${NavLinkAnchor}`]: {
       color: '$gray900',
     },
+    'svg .fill,svg .stroke': {
+      fill: '$gray900',
+      stroke: '$gray900',
+    },
   },
   '@lg': {
     fontSize: '16px',
