@@ -4,6 +4,7 @@ import { styled } from 'core/stitches'
 import { Anchor } from 'primitives/Anchor'
 import { Flex } from 'primitives/Flex'
 import { Span } from 'primitives/Span'
+import { Icon } from 'components/Icon'
 
 const NavLinkText = styled(Span, {
   fontWeight: 500,
@@ -109,6 +110,7 @@ export const NavLink = forwardRef<HTMLAnchorElement, NavLinkProps>(
       withHighlight = false,
       highlightPosition,
       css,
+      target,
       ...props
     },
     ref
@@ -120,8 +122,14 @@ export const NavLink = forwardRef<HTMLAnchorElement, NavLinkProps>(
         withHighlight={withHighlight}
         css={css}
       >
-        <NavLinkAnchor nounderline ref={ref} {...props}>
+        <NavLinkAnchor nounderline ref={ref} target={target} {...props}>
           <NavLinkText>{children}</NavLinkText>
+          {target === '_blank' && (
+            <Icon
+              icon='ExternalLink'
+              css={{ height: 17, width: 17, marginLeft: '5px' }}
+            />
+          )}
         </NavLinkAnchor>
       </NavLinkContainer>
     )
