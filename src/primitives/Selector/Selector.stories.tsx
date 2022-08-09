@@ -1,22 +1,18 @@
 import { useState } from 'react'
 import { Meta, Story } from '@storybook/react'
 import { StoryWrapper } from 'components/StoryWrapper'
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectIcon,
-  SelectItem,
-  SelectItemText,
-  SelectTrigger,
-  SelectValue,
-  SelectViewport,
-} from 'primitives/Selector'
-import { Icon } from 'components/Icon'
+import { Selector } from 'primitives/Selector'
+import { Icon, KnownIcon } from 'components/Icon'
 import { Flex } from 'primitives/Flex'
 import { ComponentProps } from '@stitches/react'
 
-interface TemplateProps extends ComponentProps<typeof Select> {}
+interface TemplateProps extends ComponentProps<typeof Selector.Root> {}
+
+const tokenToIconMap: Record<string, KnownIcon> = {
+  ETH: 'BadgeEthereum',
+  BNB: 'BadgeBinance',
+  MATIC: 'BadgePolygon',
+}
 
 const Template: Story<TemplateProps> = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -24,56 +20,52 @@ const Template: Story<TemplateProps> = () => {
   return (
     <StoryWrapper>
       <Flex css={{ alignItems: 'center' }}>
-        <Select
+        <Selector.Root
           onOpenChange={(open) => setIsOpen(open)}
           defaultValue='ETH'
           onValueChange={(value) => setSelectedValue(value)}
         >
-          <SelectTrigger aria-label='Networks'>
-            <Icon
-              icon={
-                selectedValue === 'ETH'
-                  ? 'BadgeEthereum'
-                  : selectedValue === 'BNB'
-                  ? 'BadgeBinance'
-                  : 'BadgePolygon'
-              }
-              css={{ height: 20, marginRight: '10px' }}
-            />
-            <SelectValue placeholder='ETH' />
-            <SelectIcon>
+          <Selector.Trigger aria-label='Networks'>
+            <Flex center full>
               <Icon
-                icon='Chevron'
-                css={{
-                  transform: !isOpen ? 'rotate(90deg)' : 'rotate(270deg)',
-                  transition: 'transform 150ms ease',
-                  '& .primary.stroke': {
-                    stroke: '$gray900',
-                    strokeWidth: '2px',
-                  },
-                }}
+                icon={tokenToIconMap[selectedValue]}
+                css={{ height: 20, marginRight: '10px' }}
               />
-            </SelectIcon>
-          </SelectTrigger>
-          <SelectContent>
-            <SelectViewport>
-              <SelectGroup>
-                <SelectItem value='ETH'>
+              <Selector.Value placeholder='ETH' />
+              <Selector.Icon>
+                <Icon
+                  icon='Chevron'
+                  css={{
+                    transform: !isOpen ? 'rotate(90deg)' : 'rotate(270deg)',
+                    transition: 'transform 150ms ease',
+                    '& .primary.stroke': {
+                      stroke: '$gray900',
+                      strokeWidth: '2px',
+                    },
+                  }}
+                />
+              </Selector.Icon>
+            </Flex>
+          </Selector.Trigger>
+          <Selector.Content>
+            <Selector.Viewport>
+              <Selector.Group>
+                <Selector.Item value='ETH'>
                   <Icon icon='BadgeEthereum' css={{ height: 20 }} />
-                  <SelectItemText>Ethereum</SelectItemText>
-                </SelectItem>
-                <SelectItem value='BNB'>
+                  <Selector.ItemText>Ethereum</Selector.ItemText>
+                </Selector.Item>
+                <Selector.Item value='BNB' css={{ minWidth: '100px' }}>
                   <Icon icon='BadgeBinance' css={{ height: 20 }} />
-                  <SelectItemText>Binance</SelectItemText>
-                </SelectItem>
-                <SelectItem value='MATIC'>
+                  <Selector.ItemText>BSC Testnet</Selector.ItemText>
+                </Selector.Item>
+                <Selector.Item value='MATIC'>
                   <Icon icon='BadgePolygon' css={{ height: 20 }} />
-                  <SelectItemText>Polygon</SelectItemText>
-                </SelectItem>
-              </SelectGroup>
-            </SelectViewport>
-          </SelectContent>
-        </Select>
+                  <Selector.ItemText>Polygon Mainnet</Selector.ItemText>
+                </Selector.Item>
+              </Selector.Group>
+            </Selector.Viewport>
+          </Selector.Content>
+        </Selector.Root>
       </Flex>
     </StoryWrapper>
   )
