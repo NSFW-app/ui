@@ -50,6 +50,14 @@ const Template: Story<TemplateProps> = ({ type, withHighlight }) => {
         >
           FAQs
         </NavLink>
+        <NavLink
+          href='https://snapshot.org/#/nsfwgov.eth'
+          target='_blank'
+          highlightPosition={type}
+          withHighlight={withHighlight}
+        >
+          Voting
+        </NavLink>
       </NavBar>
     </StoryWrapper>
   )
