@@ -1,5 +1,12 @@
 # @nsfw-app/ui
 
+## 1.8.0
+
+### Minor Changes
+
+- 5b380fc: Add GnosisSafe icon
+- e62864f: Add ExternalLink icon to NavLink with target="\_blank"
+
 ## 1.7.0
 
 ### Minor Changes
