@@ -1,5 +1,15 @@
 # @nsfw-app/ui
 
+## 1.7.0
+
+### Minor Changes
+
+- a3da4e4: Add Radix UI Selector component with Network Selectory story
+
+### Patch Changes
+
+- d5837cc: Fix BadgeNsfw svg property errors
+
 ## 1.6.0
 
 ### Minor Changes
