@@ -19,7 +19,7 @@ const StyledTrigger = styled(SelectPrimitive.SelectTrigger, {
   padding: '0 15px',
   fontSize: 15,
   height: 50,
-  background: theme.gradients.blue2,
+  backgroundColor: '$gray400',
   color: '$gray900',
   boxShadow: '0 2px 10px $gray100',
   border: '1px solid $gray300',
