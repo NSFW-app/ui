@@ -31,14 +31,16 @@ export interface ProgressBarProps
 export const ProgressBar: React.FC<ProgressBarProps> = ({
   defaultValue = 0,
   progressValue = 0,
+  delayDuration = 400,
   css = {},
 }) => {
   const [progress, setProgress] = React.useState(defaultValue)
 
+  // Delay animation effect
   React.useEffect(() => {
-    const timer = setTimeout(() => setProgress(progressValue), 400)
+    const timer = setTimeout(() => setProgress(progressValue), delayDuration)
     return () => clearTimeout(timer)
-  }, [progressValue])
+  }, [progressValue, delayDuration])
 
   return (
     <Progress value={progressValue} css={css}>
