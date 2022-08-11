@@ -6,9 +6,9 @@ const StyledProgress = styled(ProgressPrimitive.Root, {
   position: 'relative',
   overflow: 'hidden',
   background: '$gray400',
-  borderRadius: '99999px',
+  borderRadius: '9999px',
   width: '100%',
-  height: 12,
+  height: 8,
   transform: 'translateZ(0)',
 })
 
@@ -41,9 +41,9 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
   }, [progressValue])
 
   return (
-    <Progress value={progressValue} css={{ ...css }}>
+    <Progress value={progressValue} css={css}>
       <ProgressIndicator
-        style={{ transform: `translateX(-${100 - progress}%)` }}
+        css={{ transform: `translateX(-${100 - progress}%)` }}
       />
     </Progress>
   )
