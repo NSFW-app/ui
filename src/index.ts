@@ -48,6 +48,7 @@ export { Dot } from './primitives/Dot'
 export { Tag } from './primitives/Tag'
 export { TextSkeleton } from './primitives/TextSkeleton'
 export { Selector } from './primitives/Selector'
+export { ProgressBar } from './primitives/ProgressBar'
 // -- Common
 export { Avatar, AvatarProps } from './components/Avatar'
 export { Button, ButtonProps } from './components/Button'
