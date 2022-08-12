@@ -28,7 +28,8 @@ const ModalContainer = styled(animated.div, {
   maxWidth: '100%',
   width: '100%',
   zIndex: '$modal',
-  backgroundColor: '$gray100',
+  backgroundColor: 'transparent',
+  backdropFilter: 'blur(1px)',
   '@lg': {
     backgroundColor: utils.setColorOpacity(theme.colors.gray100, 0.5),
   },

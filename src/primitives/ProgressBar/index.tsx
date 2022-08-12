@@ -26,6 +26,7 @@ export interface ProgressBarProps
   extends ComponentProps<typeof StyledProgress> {
   defaultValue: number
   progressValue: number
+  delayDuration: number
 }
 
 export const ProgressBar: React.FC<ProgressBarProps> = ({
