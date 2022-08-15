@@ -1,5 +1,15 @@
 # @nsfw-app/ui
 
+## 1.9.0
+
+### Minor Changes
+
+- b8b45c7: Add ProgressBar component
+
+### Patch Changes
+
+- c0f5796: Transparent Modal/PopupDialog backdrop with blurred variant
+
 ## 1.8.0
 
 ### Minor Changes
