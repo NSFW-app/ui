@@ -28,13 +28,20 @@ const ModalContainer = styled(animated.div, {
   maxWidth: '100%',
   width: '100%',
   zIndex: '$modal',
-  backgroundColor: '$gray100',
+  backgroundColor: 'transparent',
   '@lg': {
     backgroundColor: utils.setColorOpacity(theme.colors.gray100, 0.5),
   },
+  variants: {
+    backdrop: {
+      blurred: {
+        backdropFilter: 'blur(1px)',
+      },
+    },
+  },
 })
 
-export interface ModalProps extends ComponentProps<typeof Flex> {
+export interface ModalProps extends ComponentProps<typeof ModalContainer> {
   animation?: ModalAnimation
   isOpen?: boolean
   onBackgroundClick?: () => void
@@ -47,6 +54,7 @@ export const Modal: React.FC<ModalProps> = ({
   isOpen,
   onBackgroundClick,
   style,
+  ...props
 }) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const selectedAnimation = isTransitionProps(animation)
@@ -82,6 +90,7 @@ export const Modal: React.FC<ModalProps> = ({
               }}
               css={css}
               style={{ ...style, ...styles }}
+              {...props}
             >
               {Children.map(children, (child) => {
                 return isValidElement(child)
