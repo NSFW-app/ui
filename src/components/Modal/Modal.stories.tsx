@@ -74,7 +74,7 @@ export default {
 
 export const FullScreen = Template.bind({})
 
-const OpaqueBackgroundTemplate: Story<ModalProps> = ({ animation }) => {
+const BackdropTemplate: Story<ModalProps> = ({ animation, ...props }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false)
 
   // Modal is portalled to document body and shows scroll bar in Storybook, if we set overflow
@@ -98,6 +98,7 @@ const OpaqueBackgroundTemplate: Story<ModalProps> = ({ animation }) => {
         isOpen={modalIsOpen}
         onBackgroundClick={() => setModalIsOpen(false)}
         animation={animation}
+        {...props}
       >
         <ModalContentDialog
           css={{
@@ -123,11 +124,16 @@ const OpaqueBackgroundTemplate: Story<ModalProps> = ({ animation }) => {
       <Button onClick={() => setModalIsOpen(true)} theme='primary'>
         Open Modal
       </Button>
+      <p>This is some content</p>
     </StoryWrapper>
   )
 }
 
-export const OpaqueBackground = OpaqueBackgroundTemplate.bind({})
+export const TransparentBackdrop = BackdropTemplate.bind({})
+export const BlurredBackdrop = BackdropTemplate.bind({})
+BlurredBackdrop.args = {
+  backdrop: 'blurred',
+}
 
 const NestedModalsTemplate: Story<ModalProps> = ({ animation }) => {
   const [modal1IsOpen, setModal1IsOpen] = useState(false)

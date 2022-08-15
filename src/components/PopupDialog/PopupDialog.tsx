@@ -16,6 +16,7 @@ export const PopupDialog: React.FC<PopupDialogProps> = ({
   children,
   isOpen,
   css,
+  ...props
 }) => {
   const [{ y }, api] = useSpring(() => ({ y: 0 }))
 
@@ -41,6 +42,7 @@ export const PopupDialog: React.FC<PopupDialogProps> = ({
           width: '100%',
         },
       }}
+      {...props}
     >
       <PopupDialogModalContainer
         css={{
