@@ -182,6 +182,7 @@ export const primaryPillButtonCss: CSS = {
   '@media (hover: hover)': {
     '&:hover': {
       backgroundColor: theme.colors.voilet200,
+      color: theme.colors.gray900,
     },
   },
 }
