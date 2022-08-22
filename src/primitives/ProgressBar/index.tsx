@@ -24,18 +24,16 @@ export const ProgressIndicator = StyledIndicator
 
 export interface ProgressBarProps
   extends ComponentProps<typeof StyledProgress> {
-  progressValue: number
+  value: number
 }
 
 export const ProgressBar: React.FC<ProgressBarProps> = ({
-  progressValue = 0,
+  value = 0,
   css = {},
 }) => {
   return (
-    <Progress value={progressValue} css={css}>
-      <ProgressIndicator
-        style={{ transform: `translateX(-${100 - progressValue}%)` }}
-      />
+    <Progress value={value} css={css}>
+      <ProgressIndicator css={{ transform: `translateX(-${100 - value}%)` }} />
     </Progress>
   )
 }
