@@ -1,5 +1,14 @@
 # @nsfw-app/ui
 
+## 1.9.1
+
+### Patch Changes
+
+- 35616a7: Simplify ProgressBar removing delayed animation effect
+- 4306504: Fix primary pill button hover style
+
+  Set primary pill compound variant hover text color to white instead of grey
+
 ## 1.9.0
 
 ### Minor Changes
