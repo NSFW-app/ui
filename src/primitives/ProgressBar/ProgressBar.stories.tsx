@@ -3,16 +3,10 @@ import { StoryWrapper } from 'components/StoryWrapper'
 import { ProgressBar, ProgressBarProps } from '.'
 
 interface TemplateProps extends ProgressBarProps {}
-const Template: Story<TemplateProps> = ({
-  defaultValue = 10,
-  progressValue,
-}) => (
+
+const Template: Story<TemplateProps> = ({ value = 0 }) => (
   <StoryWrapper>
-    <ProgressBar
-      defaultValue={defaultValue}
-      progressValue={progressValue}
-      css={{ width: '400px' }}
-    />
+    <ProgressBar value={value} css={{ width: '400px' }} />
   </StoryWrapper>
 )
 
@@ -20,12 +14,7 @@ export default {
   title: 'Primitives/ProgressBar',
   component: Template,
   argTypes: {
-    defaultValue: {
-      control: {
-        type: 'number',
-      },
-    },
-    progressValue: {
+    value: {
       control: {
         type: 'number',
       },

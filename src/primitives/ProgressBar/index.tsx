@@ -24,30 +24,16 @@ export const ProgressIndicator = StyledIndicator
 
 export interface ProgressBarProps
   extends ComponentProps<typeof StyledProgress> {
-  defaultValue: number
-  progressValue: number
-  delayDuration: number
+  value: number
 }
 
 export const ProgressBar: React.FC<ProgressBarProps> = ({
-  defaultValue = 0,
-  progressValue = 0,
-  delayDuration = 400,
+  value = 0,
   css = {},
 }) => {
-  const [progress, setProgress] = React.useState(defaultValue)
-
-  // Delay animation effect
-  React.useEffect(() => {
-    const timer = setTimeout(() => setProgress(progressValue), delayDuration)
-    return () => clearTimeout(timer)
-  }, [progressValue, delayDuration])
-
   return (
-    <Progress value={progressValue} css={css}>
-      <ProgressIndicator
-        css={{ transform: `translateX(-${100 - progress}%)` }}
-      />
+    <Progress value={value} css={css}>
+      <ProgressIndicator css={{ transform: `translateX(-${100 - value}%)` }} />
     </Progress>
   )
 }
