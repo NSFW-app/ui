@@ -26,14 +26,5 @@ export const Flex = styled(Box, {
     column: {
       true: { flexDirection: 'column' },
     },
-    full: {
-      true: { height: '100%', width: '100%' },
-    },
-    fullWidth: {
-      true: { width: '100%' },
-    },
-    fullHeight: {
-      true: { height: '100%' },
-    },
   },
 })
