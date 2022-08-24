@@ -1,5 +1,11 @@
 # @nsfw-app/ui
 
+## 1.9.2
+
+### Patch Changes
+
+- 35cb26e: Add Coinbase Icon
+
 ## 1.9.1
 
 ### Patch Changes
