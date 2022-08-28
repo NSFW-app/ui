@@ -68,7 +68,7 @@ export const toFloatString = (
   const floatInt = num ? parseFloat(num.toString()) : 0
   if (isNaN(floatInt)) return '0'
 
-  return point ? floatInt.toFixed(point) : floatInt.toString()
+  return point !== undefined ? floatInt.toFixed(point) : floatInt.toString()
 }
 
 // 100000000000.000 => 100,000,000,000.000
