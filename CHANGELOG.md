@@ -1,5 +1,13 @@
 # @nsfw-app/ui
 
+## 1.9.3
+
+### Patch Changes
+
+- 3117a05: Fix util toFloatString bug
+
+  Guard for undefined not falsey for zero decimal place
+
 ## 1.9.2
 
 ### Patch Changes
