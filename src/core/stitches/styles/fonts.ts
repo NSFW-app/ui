@@ -18,7 +18,7 @@ import RobotoBold from 'assets/fonts/Roboto/Roboto-Bold.ttf'
 import GtSuperDisplayLightTrial from 'assets/fonts/GT-Super/GT-Super-Text-Black-Trial.ttf'
 import GtSuperDisplayMediumTrial from 'assets/fonts/GT-Super/GT-Super-Text-Medium-Trial.ttf'
 import GtSuperDisplayRegularTrial from 'assets/fonts/GT-Super/GT-Super-Text-Regular-Trial.ttf'
-import GtSuperDisplaySuperTrial from 'assets/fonts/GT-Super/GT-Super-Text-Super-Trial.ttf'
+import GtSuperDisplaySuperTrial from 'assets/fonts/GT-Super/GT-Super-Text-Book-Trial.ttf'
 import GtSuperDisplayBoldTrial from 'assets/fonts/GT-Super/GT-Super-Text-Bold-Trial.ttf'
 
 // Tell Rollup to include this file in the bundle.
