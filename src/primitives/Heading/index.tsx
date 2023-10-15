@@ -4,6 +4,7 @@ export const Heading = styled('h1', {
   color: theme.colors.gray900,
   transition: 'color 200ms ease',
   fontWeight: 600,
+  fontFamily: theme.fonts.tertiary,
   variants: {
     as: {
       h1: {
