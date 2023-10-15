@@ -15,7 +15,7 @@ import RobotoRegular from 'assets/fonts/Roboto/Roboto-Regular.ttf'
 import RobotoMedium from 'assets/fonts/Roboto/Roboto-Medium.ttf'
 import RobotoBold from 'assets/fonts/Roboto/Roboto-Bold.ttf'
 
-import GtSuperDisplayLightTrial from 'assets/fonts/GT-Super/GT-Super-Text-Light-Trial.ttf'
+import GtSuperDisplayLightTrial from 'assets/fonts/GT-Super/GT-Super-Text-Black-Trial.ttf'
 import GtSuperDisplayMediumTrial from 'assets/fonts/GT-Super/GT-Super-Text-Medium-Trial.ttf'
 import GtSuperDisplayRegularTrial from 'assets/fonts/GT-Super/GT-Super-Text-Regular-Trial.ttf'
 import GtSuperDisplaySuperTrial from 'assets/fonts/GT-Super/GT-Super-Text-Super-Trial.ttf'
