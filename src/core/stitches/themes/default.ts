@@ -23,6 +23,7 @@ export const defaultTheme = createStitches({
     fonts: {
       primary: '"Inter", sans-serif',
       secondary: '"Roboto", Arial, Helvetica, sans-serif;',
+      display: '"GT Super Display", sans-serif',
     },
     space: {
       1: '4px',
