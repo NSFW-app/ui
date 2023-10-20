@@ -1,6 +1,6 @@
 {
   "name": "@nsfw-app/ui",
-  "version": "1.9.3",
+  "version": "1.9.4",
   "description": "NSFW Design System & UI Components library",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -28,7 +28,7 @@
     "build:storybook": "build-storybook  -o .storybook/static",
     "build": "yarn clean && yarn rollup -c",
     "dev": "yarn build --watch",
-    "clean": "shx rm -rf dist",
+    "clean": "rm -rf dist",
     "prepare": "husky install",
     "lint": "eslint --ext .js,.ts,.tsx .",
     "prepublishOnly": "yarn build"
@@ -118,7 +118,6 @@
     "rollup-plugin-peer-deps-external": "^2.2.2",
     "rollup-plugin-styles": "^4.0.0",
     "rollup-plugin-url": "^3.0.1",
-    "shx": "^0.3.4",
     "ttypescript": "^1.5.13",
     "typescript": "4.5.2"
   }
