@@ -15,11 +15,11 @@ import RobotoRegular from 'assets/fonts/Roboto/Roboto-Regular.ttf'
 import RobotoMedium from 'assets/fonts/Roboto/Roboto-Medium.ttf'
 import RobotoBold from 'assets/fonts/Roboto/Roboto-Bold.ttf'
 
-import GtSuperDisplayLightTrial from 'assets/fonts/GT-Super/GT-Super-Text-Black-Trial.ttf'
-import GtSuperDisplayMediumTrial from 'assets/fonts/GT-Super/GT-Super-Text-Medium-Trial.ttf'
-import GtSuperDisplayRegularTrial from 'assets/fonts/GT-Super/GT-Super-Text-Regular-Trial.ttf'
-import GtSuperDisplaySuperTrial from 'assets/fonts/GT-Super/GT-Super-Text-Book-Trial.ttf'
-import GtSuperDisplayBoldTrial from 'assets/fonts/GT-Super/GT-Super-Text-Bold-Trial.ttf'
+import GtSuperDisplayLight from 'assets/fonts/GT-Super/GT-Super-Display-Light.ttf'
+import GtSuperDisplayMedium from 'assets/fonts/GT-Super/GT-Super-Display-Medium.ttf'
+import GtSuperDisplayRegular from 'assets/fonts/GT-Super/GT-Super-Display-Regular.ttf'
+import GtSuperDisplaySuper from 'assets/fonts/GT-Super/GT-Super-Display-Super.ttf'
+import GtSuperDisplayBold from 'assets/fonts/GT-Super/GT-Super-Display-Bold.ttf'
 
 // Tell Rollup to include this file in the bundle.
 // Keeping these here as good POC of CSS inclusion, but not exactly sure how we'll use this.
@@ -129,36 +129,36 @@ export const fonts = globalCss({
 
     // -------GT_SUPER_DISPLAY----------
     {
-      fontFamily: 'GT-Super-Display',
-      src: `local("GT-Super-Text-Light-Trial"), url("${GtSuperDisplayLightTrial}") format("truetype")`,
+      fontFamily: 'GT Super Display',
+      src: `local("GT-Super-Display-Light"), url("${GtSuperDisplayLight}") format("truetype")`,
       fontWeight: 100,
       fontStyle: 'normal',
       fontDisplay: 'fallback',
     },
     {
-      fontFamily: 'GT-Super-Display',
-      src: `local("GT-Super-Text-Light-Trial"), url("${GtSuperDisplayMediumTrial}") format("truetype")`,
+      fontFamily: 'GT Super Display',
+      src: `local("GT-Super-Display-Regular"), url("${GtSuperDisplayRegular}") format("truetype")`,
       fontWeight: 300,
       fontStyle: 'normal',
       fontDisplay: 'fallback',
     },
     {
-      fontFamily: 'GT-Super-Display',
-      src: `local("GT-Super-Text-Regular-Trial"), url("${GtSuperDisplayRegularTrial}") format("truetype")`,
+      fontFamily: 'GT Super Display',
+      src: `local("GT-Super-Display-Medium"), url("${GtSuperDisplayMedium}") format("truetype")`,
       fontWeight: 500,
       fontStyle: 'normal',
       fontDisplay: 'fallback',
     },
     {
-      fontFamily: 'GT-Super-Display',
-      src: `local("GT-Super-Text-Super-Trial"), url("${GtSuperDisplaySuperTrial}") format("truetype")`,
+      fontFamily: 'GT Super Display',
+      src: `local("GT-Super-Display-Super"), url("${GtSuperDisplaySuper}") format("truetype")`,
       fontWeight: 700,
       fontStyle: 'normal',
       fontDisplay: 'fallback',
     },
     {
-      fontFamily: 'GT-Super-Display',
-      src: `local("GT-Super-Text-Bold-Trial"), url("${GtSuperDisplayBoldTrial}") format("truetype")`,
+      fontFamily: 'GT Super Display',
+      src: `local("GT-Super-Display-Bold"), url("${GtSuperDisplayBold}") format("truetype")`,
       fontWeight: 900,
       fontStyle: 'normal',
       fontDisplay: 'fallback',
