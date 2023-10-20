@@ -151,14 +151,14 @@ export const fonts = globalCss({
     },
     {
       fontFamily: 'GT Super Display',
-      src: `local("GT-Super-Display-Super"), url("${GtSuperDisplaySuper}") format("truetype")`,
+      src: `local("GT-Super-Display-Bold"), url("${GtSuperDisplayBold}") format("truetype")`,
       fontWeight: 700,
       fontStyle: 'normal',
       fontDisplay: 'fallback',
     },
     {
       fontFamily: 'GT Super Display',
-      src: `local("GT-Super-Display-Bold"), url("${GtSuperDisplayBold}") format("truetype")`,
+      src: `local("GT-Super-Display-Super"), url("${GtSuperDisplaySuper}") format("truetype")`,
       fontWeight: 900,
       fontStyle: 'normal',
       fontDisplay: 'fallback',
